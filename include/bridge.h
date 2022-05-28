@@ -14,6 +14,8 @@ __attribute__((__noreturn__)) void logz_rs_error_handler();
 
 // LOG
 
+void log_dbg(const char *restrict msg);
+
 void log_inf(const char *restrict msg);
 
 void log_wrn(const char *restrict msg);

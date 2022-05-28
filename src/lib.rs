@@ -53,7 +53,8 @@ impl Log for ZLog {
         let log_impl = match record.level() {
             Level::Error => log_err,
             Level::Warn => log_wrn,
-            _ => log_inf,
+            Level::Info => log_inf,
+            _ => log_dbg,
         };
         let mut c_str = String::<256>::new();
         write!(c_str, "{}: {}\0", record.target(), record.args()).unwrap();

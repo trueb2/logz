@@ -58,6 +58,11 @@ __attribute__((__noreturn__)) void logz_rs_error_handler()
 
 LOG_MODULE_REGISTER(rs, LOG_LEVEL_DBG);
 
+void log_dbg(const char *restrict msg)
+{
+    LOG_DBG("%s", msg);
+}
+
 void log_inf(const char *restrict msg)
 {
     LOG_INF("%s", msg);
