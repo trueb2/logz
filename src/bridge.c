@@ -1,4 +1,3 @@
-#include "bridge.h"
 #include "logz.h"
 
 #include "autoconf.h"

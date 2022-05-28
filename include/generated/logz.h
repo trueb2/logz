@@ -1,5 +1,5 @@
-#ifndef LIBLOGZ_RS_INCLUDE_GENERATED_LIB_LOGZ_H
-#define LIBLOGZ_RS_INCLUDE_GENERATED_LIB_LOGZ_H
+#ifndef LIBLOGZ_RS_INCLUDE_GENERATED_LOGZ_H
+#define LIBLOGZ_RS_INCLUDE_GENERATED_LOGZ_H
 
 /* Generated with cbindgen:0.23.0 */
 
@@ -18,4 +18,4 @@ void logz_init_info(void);
 
 void logz_init_trace(void);
 
-#endif /* LIBLOGZ_RS_INCLUDE_GENERATED_LIB_LOGZ_H */
+#endif /* LIBLOGZ_RS_INCLUDE_GENERATED_LOGZ_H */
