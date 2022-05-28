@@ -1,0 +1,3 @@
+
+config ZLOG_RS
+    bool "Enable logging through zlog-rs"

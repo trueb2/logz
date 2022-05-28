@@ -1,0 +1,35 @@
+# Test on local, build for embedded on NRF52
+
+[tasks.cbindgen]
+command = "cbindgen"
+args = ["--config", "cbindgen.toml", "--crate", "zlog-rs", "--output", "include/generated/libzlog_rs.h"]
+
+[tasks.build-nrf52]
+command = "cargo"
+toolchain = "stable"
+args = ["build", "--lib", "--target", "thumbv7em-none-eabihf", "--release"] 
+dependencies = ["cbindgen"]
+
+[tasks.build-nrf53]
+command = "cargo"
+toolchain = "stable"
+args = ["build", "--lib", "--target", "thumbv8m.main-none-eabihf", "--release"]
+dependencies = ["cbindgen"]
+
+[tasks.build]
+command = "cargo"
+toolchain = "stable"
+args = ["build"]
+dependencies = ["build-nrf52", "build-nrf53"]
+
+[tasks.test-release]
+command = "cargo"
+toolchain = "stable"
+args = ["test", "--lib", "--release"]
+dependencies = ["build"]
+
+[tasks.test]
+command = "cargo"
+toolchain = "stable"
+args = ["test", "--lib"]
+dependencies = ["test-release"]
