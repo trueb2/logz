@@ -13,7 +13,8 @@ use log::*;
 
 mod bindings;
 use bindings::*;
-pub mod fatal;
+#[cfg(not(test))]
+mod fatal;
 
 pub static LOGZ_LOGGER: ZLog = ZLog;
 
