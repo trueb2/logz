@@ -29,4 +29,4 @@ If you have all of that, then `cargo make test` should work.
 
 ## Example
 
-In the example, we have a `blinky` application compiled for NRF52 or NRF53. The CMakeLists.txt of the sample project adds logz-rs as a static library, exposes the headers to sample app, and runs the build with cargo whenever you build.
+In the example, we have a `blinky` application compiled for NRF52 or NRF53. The CMakeLists.txt of the sample project adds logz as a static library, exposes the headers to sample app, and runs the build with cargo whenever you build.
