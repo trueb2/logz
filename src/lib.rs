@@ -13,33 +13,33 @@ use log::*;
 
 mod bindings;
 use bindings::*;
-mod fatal;
+pub mod fatal;
 
-pub static LOGGER: ZLog = ZLog;
+pub static LOGZ_LOGGER: ZLog = ZLog;
 
 pub struct ZLog;
 
-fn zlog_init(lvl: LevelFilter) {
-    log::set_logger(&LOGGER).unwrap();
+fn logz_init(lvl: LevelFilter) {
+    log::set_logger(&LOGZ_LOGGER).unwrap();
     log::set_max_level(lvl);
-    log::info!("Initialized zlog")
+    log::info!("Initialized logz")
 }
 
 #[no_mangle]
-pub extern "C" fn zlog_init_error() {
-    zlog_init(LevelFilter::Error);
+pub extern "C" fn logz_init_error() {
+    logz_init(LevelFilter::Error);
 }
 #[no_mangle]
-pub extern "C" fn zlog_init_warn() {
-    zlog_init(LevelFilter::Warn);
+pub extern "C" fn logz_init_warn() {
+    logz_init(LevelFilter::Warn);
 }
 #[no_mangle]
-pub extern "C" fn zlog_init_info() {
-    zlog_init(LevelFilter::Info);
+pub extern "C" fn logz_init_info() {
+    logz_init(LevelFilter::Info);
 }
 #[no_mangle]
-pub extern "C" fn zlog_init_trace() {
-    zlog_init(LevelFilter::Trace);
+pub extern "C" fn logz_init_trace() {
+    logz_init(LevelFilter::Trace);
 }
 
 impl Log for ZLog {

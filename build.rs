@@ -28,7 +28,7 @@ fn main() {
         // The input header we would like to generate
         // bindings for.
         .header("include/bridge.h")
-        .allowlist_function("zlog_rs_error_handler")
+        .allowlist_function("logz_rs_error_handler")
         .allowlist_function("log_.*")
         .allowlist_var("CONFIG_.*")
         // Tell cargo to invalidate the built crate whenever any of the

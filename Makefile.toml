@@ -2,7 +2,7 @@
 
 [tasks.cbindgen]
 command = "cbindgen"
-args = ["--config", "cbindgen.toml", "--crate", "zlog-rs", "--output", "include/generated/libzlog_rs.h"]
+args = ["--config", "cbindgen.toml", "--crate", "logz", "--output", "include/generated/liblogz_rs.h"]
 
 [tasks.build-nrf52]
 command = "cargo"

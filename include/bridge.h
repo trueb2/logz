@@ -1,5 +1,5 @@
-#ifndef ZLOG_RS_INCLUDE_BRIDGE_H
-#define ZLOG_RS_INCLUDE_BRIDGE_H
+#ifndef LOGZ_RS_INCLUDE_BRIDGE_H
+#define LOGZ_RS_INCLUDE_BRIDGE_H
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -10,7 +10,7 @@
 
 // FATAL ERROR HANDLER
 
-__attribute__((__noreturn__)) void zlog_rs_error_handler();
+__attribute__((__noreturn__)) void logz_rs_error_handler();
 
 // LOG
 
