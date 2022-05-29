@@ -1,6 +1,6 @@
 # LOGZ
 
-This repo provides a crate with a Rust Logger implementation for use on an embedded device with Zephyr RTOS. `bindgen` and `cbindgen` are used to bind Rust calls to Zephyr RTOS's log2 implementation
+This repo provides a crate with a Rust Logger implementation for use on an embedded device with Zephyr RTOS. `bindgen` and `cbindgen` are used to bind Rust calls to Zephyr RTOS's log2 implementation. Since this crate is targetting NRF52 and NRF53 deployments, it is `no_std` and does not allocate.
 
 ## Build
 

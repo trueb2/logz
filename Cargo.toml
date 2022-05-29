@@ -2,10 +2,11 @@
 name = "logz"
 description = "Zephyr RTOS logging implementation"
 repository = "https://github.com/trueb2/logz"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 license = "MIT OR Apache-2.0"
-keywords = ["log", "zephyr", "nrf52", "nrf53"]
+keywords = ["log", "zephyr", "nrf", "bidnings", "ffi"]
+categories = ["no-std"]
 
 [lib]
 crate-type = ["rlib"]
